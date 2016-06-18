@@ -42,7 +42,7 @@ public class ResizingArrayStack<Item> implements Iterable<Item> {
     a = temp;
   }
 
-  public Iterator iterator() {
+  public Iterator<Item> iterator() {
     return new ReverseArrayIterator();
   }
 
