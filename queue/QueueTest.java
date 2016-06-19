@@ -15,8 +15,8 @@ public class QueueTest {
 
     Iterator<Integer> it = q.iterator();
 
-    while (it.hasNext()) {
-      StdOut.println(it.next());
+    for (int i: q) {
+      StdOut.println(i);
     }
 
     assert q.dequeue() == 1;
