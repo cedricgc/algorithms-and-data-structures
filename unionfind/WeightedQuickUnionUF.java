@@ -47,6 +47,9 @@ class WeightedQuickUnionUF {
     int mover = id[start];
     // Reached root when index value matches index
     while (id[mover] != mover) {
+      // Path Compression: make non-terminal node point to grandparent to
+      // flatten tree
+      id[mover] = id[id[mover]];
       mover = id[mover];
     }
 
